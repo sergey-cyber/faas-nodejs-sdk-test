@@ -29,6 +29,7 @@
     "semver": "^7.3.5"
   },
   "bin": {
-    "faas-sdk-nodejs": "./build/index.js"
+    "faas-sdk-nodejs": "./build/index.js",
+    "faas-sdk-nodejs/signer": "./signer-sdk/signer.js"
   }
 }

@@ -1,5 +1,5 @@
 // HWS API Gateway Signature
-function crypto (root, factory) {
+(function (root, factory) {
     "use strict";
 
     /*global define*/
@@ -53,9 +53,7 @@ function crypto (root, factory) {
         };
         root.signer = factory(crypto_wrapper);
     }
-}
-
-exports.signer = crypto(this, function (crypto_wrapper) {
+}(this, function (crypto_wrapper) {
     'use strict';
 
     var Algorithm = "SDK-HMAC-SHA256";
@@ -373,4 +371,4 @@ exports.signer = crypto(this, function (crypto_wrapper) {
         CanonicalRequest: CanonicalRequest,
         StringToSign: StringToSign,
     }
-});
+}));
