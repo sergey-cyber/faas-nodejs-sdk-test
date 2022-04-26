@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // HWS API Gateway Signature
 (function (root, factory) {
     "use strict";
