@@ -15,7 +15,7 @@ async function getServer(userFunction, sourceLocation) {
     app.use(bodyParser.raw());
     app.disable("x-powered-by");
     const pkg = await readPkgUp({
-        cwd: path.dirname(require.resolve(sourceLocation)),
+        cwd: path.join(__dirname, sourceLocation),
         normalize: false
     });
     const staticFolders = pkg === null || pkg === void 0 ? void 0 : pkg.packageJson.staticContentFolders;

@@ -13,8 +13,12 @@
     "sourceMap": true,
     "strict": true,
     "target": "es2018",
-    "rootDir": "./src",
+    "rootDir": ".",
     "outDir": "./build",
     "declarationMap": true
-  }
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ]
 }

@@ -4,7 +4,7 @@ import { pathToFileURL } from "url";
 import * as path from "path";
 import * as readPkgUp from "read-pkg-up";
 
-const MIN_NODE_VERSION_ESMODULES = "13.2.0";
+export const MIN_NODE_VERSION_ESMODULES = "13.2.0";
 
 async function isEsModule(modulePath: string): Promise<boolean> {
     const ext = path.extname(modulePath);

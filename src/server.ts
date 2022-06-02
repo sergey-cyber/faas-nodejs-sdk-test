@@ -20,7 +20,7 @@ export async function getServer(userFunction: HandlerFunction, sourceLocation: s
     app.disable("x-powered-by");
 
     const pkg = await readPkgUp({
-        cwd: path.dirname(require.resolve(sourceLocation)),
+        cwd: path.join(__dirname, sourceLocation),
         normalize: false
     });
 

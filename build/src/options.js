@@ -38,7 +38,7 @@ class ConfigurableOption {
 }
 const PortOption = new ConfigurableOption("port", "PORT", "8082");
 const FunctionTargetOption = new ConfigurableOption("target", "FUNCTION_TARGET", "handler");
-const SourceLocationOption = new ConfigurableOption("source", "FUNCTION_SOURCE", "", path_1.resolve);
+const SourceLocationOption = new ConfigurableOption("source", "FUNCTION_SOURCE", "handlers/handler.js", path_1.resolve);
 exports.helpText = `Example usage:
   npm start --target=handler --source=./function --port=8082`;
 /**

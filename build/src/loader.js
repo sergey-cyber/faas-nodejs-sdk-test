@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getUserFunction = void 0;
+exports.getUserFunction = exports.MIN_NODE_VERSION_ESMODULES = void 0;
 const semver = require("semver");
 const url_1 = require("url");
 const path = require("path");
 const readPkgUp = require("read-pkg-up");
-const MIN_NODE_VERSION_ESMODULES = "13.2.0";
+exports.MIN_NODE_VERSION_ESMODULES = "13.2.0";
 async function isEsModule(modulePath) {
     const ext = path.extname(modulePath);
     if (ext === ".mjs") {
@@ -44,9 +44,9 @@ async function getUserFunction(functionModulePath, targetFunction) {
         let functionModule;
         const esModule = await isEsModule(functionModulePath);
         if (esModule) {
-            if (semver.lt(process.version, MIN_NODE_VERSION_ESMODULES)) {
+            if (semver.lt(process.version, exports.MIN_NODE_VERSION_ESMODULES)) {
                 console.error(`Cannot load ES Module on Node.js ${process.version}. ` +
-                    `Please upgrade to Node.js v${MIN_NODE_VERSION_ESMODULES} and up.`);
+                    `Please upgrade to Node.js v${exports.MIN_NODE_VERSION_ESMODULES} and up.`);
                 return null;
             }
             // Resolve module path to file:// URL. Required for windows support.
