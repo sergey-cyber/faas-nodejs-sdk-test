@@ -9,7 +9,7 @@
     ".": "./build/index.js"
   },
   "scripts": {
-    "start": "node ./build/index.js --source=examples/handler.js",
+    "start": "node ./build/src/index.js --source=examples/handler.js",
     "clean": "gts clean",
     "compile": "tsc -p .",
     "build": "npm run clean && npm run compile",
@@ -34,6 +34,6 @@
     "semver": "^7.3.5"
   },
   "bin": {
-    "faas-sdk-nodejs": "./build/index.js"
+    "faas-sdk-nodejs": "./build/src/index.js"
   }
 }
